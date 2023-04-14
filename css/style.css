@@ -1,0 +1,182 @@
+html {
+  font-size: 62.5%;
+  background-color: #3C3C3C;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+nav ul {
+  min-height: 5em;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 4em; /*space between tabs*/
+  line-height: 100%;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+/*Left Column*/
+.left-col {
+  flex-basis: 30%;
+  border-top-left-radius: 20px;
+  background-color: #2B2B2B;
+  color: white;
+}
+
+.html-elements, .class-name {
+  display: flex;
+  line-height: 100%;
+  gap: 1em;
+}
+
+.tabcontent {
+  padding-left: 2.4em;
+  padding-right: 2.4em;
+}
+
+.tab button.active {
+  background-color: #1E1E1E;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.tablinks {
+  padding: 6px 24px 6px 24px;
+  color: #6D6969;
+  border: none;
+  background-color: #2B2B2B;
+}
+
+.styling-tab {
+  border-top-left-radius: 20px;
+}
+
+/*Styles*/
+
+.style-heading {
+  display: flex;
+  gap: 2em;
+}
+
+/*HTML elements*/
+
+.add-heading, .add-paragraph, .add-input, .add-textarea, .add-dropdown, .add-div, .add-button {
+  display: flex;
+  justify-content: space-between;
+  line-height: 100%;
+  margin-bottom: 2em;
+}
+
+.add-paragraph p{
+  max-width: 80%;
+}
+.tabcontent button {
+  max-height: 2em;
+}
+
+/*Right Column*/
+
+.workspace {
+  flex-grow: 1;
+  border-top-right-radius: 20px;
+  background-color: #171717;
+  color: white;
+  height: 90svh;
+  position: relative; /* add this to make child elements position relative to workspace */
+  padding: 10px;
+}
+
+.element {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: red; /*delete*/
+  padding: 10px; /*delete*/
+  cursor: move;
+}
+
+.new-p {
+  max-width: 200px;
+}
+
+/* Dark mode switch*/
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #3C3C3C;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #ffffff;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #85ceff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}

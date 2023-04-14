@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">LOGO</a></li>
+                <li><a href="">STYLE</a></li>
+                <li><a href="">LAYOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="left-col">
+            <div class="tab">
+                <button class="tablinks styling-tab" id="defaultOpen" onclick="openTab(event, 'styling-tools')">Styling Tools</button>
+                <button class="tablinks" onclick="openTab(event, 'html-elements')">HTML Elements</button>
+            </div>
+            <div id="styling-tools" class="tabcontent">
+            <!-- Content for styling tools tab -->
+            <div class="element-details">
+                <div class="html-elements">
+                    <h3>html element</h3>
+                    <p>div</p>
+                </div>
+                <div class="class-name">
+                    <h3>class name</h3>
+                    <p>.box</p>
+                </div>
+            </div>
+            <div class="transform">
+                <h2>TRANSFORM</h2>
+                <div class="style-heading">
+                    <p>W</p><input type="number"><select name="" id="">
+                        <option value="">px</option>
+                        <option value="">em</option>
+                        <option value="">%</option>
+                    </select>
+                </div>
+                <div class="style-heading">
+                    <p>H</p><input type="number"><select name="" id="">
+                        <option value="">px</option>
+                        <option value="">em</option>
+                        <option value="">%</option>
+                    </select>
+                </div>
+            </div>
+            <div class="transform">
+                <h2>APPEARANCE</h2>
+                <div class="style-heading">
+                    <P>Opacity</P>
+                    <input type="number"><P>%</P>
+                </div>
+            </div>
+
+            </div>
+            
+            <div id="html-elements" class="tabcontent">
+            <!-- Content for HTML elements tab -->
+            <div class="texts">    
+                <h2>Text Elements</h2>
+                <div class="add-heading"><h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><h5>h5</h5><h6>h6</h6><button id="addH1" class="add-element">add</button>
+                  </div>
+                <div class="add-paragraph"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis scelerisque felis. 
+                    Sed eu erat cursus, vehicula neque nec, suscipit erat. Phasellus eget porta ante. 
+                    Proin interdum odio ut viverra dignissim.</p><button id="addP" class="add-element">add</button></div>
+            </div>
+            <div class="forms">
+                <h2>Form Elements</h2>
+                <div class="add-input"><input type="" placeholder="input"><button id="addInput" class="add-element">add</button></div>
+                <div class="add-textarea"><textarea name="" id="" cols="30" rows="10" placeholder="Multi-line input field"></textarea><button id="addTextarea" class="add-element">add</button></div>
+                <div class="add-dropdown"><select name="" id=""><option value="">Dropdown list</option></select><button class="add-element">add</button></div>
+            </div>
+            <div class="other">
+                <h2>Other Elements</h2>
+                <div class="add-div"><div>div</div><button class="add-element">add</button></div>
+                <div class="add-button"><button>button</button><button class="add-element">add</button></div>
+            </div>
+            </div>
+        </div>
+        <div id="workspace" class="workspace">
+            <label class="switch">
+                <input id="darkmode" type="checkbox">
+                <span class="slider"></span>
+            </label> 
+            <h2 class="element" draggable="true">workspace</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
